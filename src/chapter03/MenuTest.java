@@ -12,10 +12,10 @@ public class MenuTest {
 		System.out.println("\t1.상풍보기 \t2.상품구입\n\t3.영수증보기\t4.종료");
 		System.out.println("*************************************");
 		Scanner scan = new Scanner(System.in);
+		//선택 메뉴 체크 확인
 		while (true) {
 		System.out.print("메뉴를 선택해주세요(숫자) > ");
 		int number = scan.nextInt();	
-		//선택 메뉴 체크 확인
 		String check = "";
 	
 		switch(number) {
