@@ -1,7 +1,7 @@
 package chapter03;
 
 public class PrimitiveDataTypeTest {
-
+	
 	public static void main(String[] args) {
 		boolean run = true; //논리형
 		
@@ -17,10 +17,19 @@ public class PrimitiveDataTypeTest {
 		double d = 100.0d;
 		
 		//문자리터럴 데이터 타입
-		char c = 'a';
+		char c = 'a'; //97
+		c = 'b';      //98
 		char c2 = 'A';
 		int c_asc = c;
 		int c_asc2 = c2;
+		char str ='홍';
+	    //char str2 = "홍"; ==> 반드시 '' 사용 가능
+		
+		//상수 정의 : 프로그램 시작부터 종료까지 같은 값을 가지며, 상수명은 전체 대문자로 선언
+		//final 키워드를 앞에 정의해야 함
+		//프로그램 시작: START(1), 종료 : END(0)
+		final int START = 1;
+		final int END = 0;
 		
 		System.out.println("boolean --> " + run);
 		System.out.println("byte : " + b);
@@ -34,6 +43,10 @@ public class PrimitiveDataTypeTest {
 		System.out.println("char : " + c2);
 		System.out.println("char ascii: " + c_asc);   //97
 		System.out.println("char ascii: " + c_asc2);  //65
+		System.out.println("START : " + START);
+		System.out.println("END : " + END);
+		
+		
 	}
 
 }
