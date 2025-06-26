@@ -15,6 +15,8 @@ import java.util.Scanner;
  *       } else {
  *            위의 모든 조건이 false인 경우 실행문;
  *       }
+ *       
+ *    ✔각 if문의 실행문이 한줄인 경우에는 {}(블록)을 생략할 수 있음  
  */
 public class IfTest {
 
