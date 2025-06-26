@@ -12,7 +12,7 @@ public class ReferenceDataType {
 		//String 클래스는 기본형으로도 사용이 가능함
 		String name2 = "홍길동";
 		
-		
+		1
 		System.out.println(name);
 		System.out.println(name2);
 		System.out.println(name == name2);
