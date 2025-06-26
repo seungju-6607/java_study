@@ -7,6 +7,17 @@ package chapter04;
 public class OpComparisonTest {
 
 	public static void main(String[] args) {
+		int number1 = 5;
+		int number2 = 2;
+		boolean result = number1 == number2;
+		
+		System.out.println("result => " + result); //result => false
+		System.out.println(number1 > number2); //true
+		System.out.println(number1 >= number2); //true
+		System.out.println(number1 < number2); //false
+		System.out.println(number1 <= number2); //false
+		System.out.println(number1 == number2); //false
+		System.out.println(number1 != number2); //true
 		
 		
 	}
