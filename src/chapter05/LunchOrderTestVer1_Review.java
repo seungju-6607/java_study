@@ -24,19 +24,26 @@ public class LunchOrderTestVer1_Review {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.print("메뉴 번호 선택 >");
+		
 		if(scan.hasNextInt()) {
-		menuNo = scan.nextInt();
+			menuNo = scan.nextInt();
+			
+			switch(menuNo) { 
+				case 1 : menuName = "햄버거(🍔)" ; menuPrice = 100 ;  break;
+				case 2 : menuName = "피자(🍕)";  menuPrice = 200  ; break;
+				case 3 : menuName = "라면(🍜)"; menuPrice = 300 ; break;
+				case 4 : menuName = "샐러드(🥗)"; menuPrice = 400 ; break;
+				case 9 : System.out.println("나가기"); System.exit(0); break;
+				
+				default : System.out.println("메뉴를 준비중입니다.");
+			} //switch
+			
+		}  else {
+			System.out.println("올바르지 않은 입력값입니다.");
+			System.exit(0);
+		} // if
 		
-		switch(menuNo) { 
-		case 1 : menuName = "햄버거(🍔)" ; menuPrice = 100 ;  break;
-		case 2 : menuName = "피자(🍕)";  menuPrice = 200  ; break;
-		case 3 : menuName = "라면(🍜)"; menuPrice = 300 ; break;
-		case 4 : menuName = "샐러드(🥗)"; menuPrice = 400 ; break;
-		case 9 : System.out.println("나가기"); System.exit(0);
 		
-		default : System.out.println("메뉴를 준비중입니다.");
-		}
-	}
 		System.out.println("선택한 음식은 : " + menuName + "한개당 가격은 "+  menuPrice + "원입니다.");
 		System.out.print("갯수 선택 > ");
 		menuget = scan.nextInt();
@@ -50,7 +57,7 @@ public class LunchOrderTestVer1_Review {
 		System.out.println("잔돈 : " + change + "입니다"  );
 		} else {
 			System.out.println("돈이모자랍니다.");
-		}
+		} 
 		
   } 
 }
