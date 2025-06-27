@@ -10,10 +10,11 @@ import java.util.Scanner;
 public class ForTest {
 
 	public static void main(String[] args) {
-		// 1~10까지 정수를 출력
+		// 1~10까지 정수의 합를 출력
 		// 시작과 종료값은 실행시 외부에서 입려을 통해 진행함
 		Scanner scan = new Scanner(System.in);
 		int start = 0, end = 0;
+		int sum = 0;
 		System.out.print("시작값 > ");
 		start = scan.nextInt();
 		
@@ -21,7 +22,8 @@ public class ForTest {
 		end = scan.nextInt();
 		
 		for(int i = start; i <= end; i++) { // 1이상의 값을 누적함으로 대입 -> i += 값
-			System.out.println("i = " + i);
+			sum += i;
+			System.out.println("sum = " + sum);
 		}
 //		System.out.println(i) //에러 : i의 블록 범위는 for 블록
 		System.out.println("-- for문 종료 -- ");
