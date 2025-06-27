@@ -47,11 +47,15 @@ public class LunchOrderTestVer1_Review {
 		System.out.println("선택한 음식은 : " + menuName + "한개당 가격은 "+  menuPrice + "원입니다.");
 		System.out.print("갯수 선택 > ");
 		menuget = scan.nextInt();
+		
 		System.out.print("선택하신 메뉴 " +  menuName  + "갯수는 " + menuget + "개 ");
 		menuget = menuPrice * menuget;
 		System.out.println(menuget + "원입니다.");
+		
 		System.out.print("내실 금액 선택 > ");
 		charge = scan.nextInt();
+		
+		
 		if(charge > menuget) {
 		change = charge - menuget; 
 		System.out.println("잔돈 : " + change + "입니다"  );
