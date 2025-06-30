@@ -72,7 +72,7 @@ public class DrinkOrderTestVer1 {
 		 
 		 int costtotal = cost - menuPrice;
 		 if(cost > menuPrice) {
-			 System.out.printf("결제완료! 잔돈:%d원" , costtotal);
+			 System.out.printf("결제완료! 잔돈:%,d원" , costtotal);
 		 } else if(cost == menuPrice ) {
 			 System.out.println("결제완료!");
 		 } else {
