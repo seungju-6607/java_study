@@ -2,8 +2,7 @@ package chapter06;
 
 import java.util.Scanner;
 
-public class ArrayTest04 {
-
+public class ArrayTest04 {  
 	public static void main(String[] args) {
 		// 배열 객체 생성 후 크기 확인 : 기본형 데이터를 저장하는 객체 생성
 		int[] numberList = new int[5];
@@ -11,7 +10,7 @@ public class ArrayTest04 {
 		boolean[] flagList = new boolean[2];
 		
 		// 배열 객체 생성 후 크기 확인 : 참조 데이터를 저장하는 객체 생성
-        Scanner scan = new Scanner(System.in); 
+     //   Scanner scan = new Scanner(System.in); 
 		Scanner[] scanList = new Scanner[3]; // Scanner 클래스를 객체를 3개 저장
 		
 		//scanList 0번지에 Scanner 객체 생성후 주소 저장
