@@ -34,7 +34,7 @@ public class ScoreTestVer1 {
 		System.out.println("학생명\t국어\t영어\t수학\t총점\t평균\t");
 		System.out.print(name+"\t");
 		for(int score : scoreList) {
-			System.out.print(score+"\t");
+			System.out.print(score+"\t"); 
 		}
 		
 	}
