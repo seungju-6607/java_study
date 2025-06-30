@@ -14,6 +14,7 @@ public class ReferenceDataCheckTest {
 		String str1 ="홍길동";
 		String str2 = "홍길동";
 		
+		
 		// call by value 형태로 값을 비교
 		System.out.println("a == b : " +  (a == b));
 		System.out.println("str1 = str2 : " + (str1 == str2));
