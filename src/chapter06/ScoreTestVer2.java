@@ -19,15 +19,18 @@ public class ScoreTestVer2 {
 		System.out.println("\t더조은 고등학교 성적관리 프로그램");
 		System.out.println("-----------------------------------");
 		
+		
 		//Step1 : 배열 선언
 		Scanner scan = new Scanner(System.in);
-		String[] nameList = new String[5];
-		int[] korList = new int[5];
-		int[] engList = new int[5];
-		int[] mathList = new int[5];
-		int[] totList = new int[5];
-		int[] avgList = new int[5];
-				
+		System.out.print("크기입력 > ");
+		final int MAX_SIZE = scan.nextInt();
+		
+		String[] nameList = new String[MAX_SIZE];
+		int[] korList = new int[MAX_SIZE];
+		int[] engList = new int[MAX_SIZE];
+		int[] mathList = new int[MAX_SIZE];
+		int[] totList = new int[MAX_SIZE];
+		int[] avgList = new int[MAX_SIZE];
 		//Step2: 데이트 입력 - 실행시 외부에서 입력
         for(int i = 0; i < nameList.length; i++) {
         	System.out.print("학생명 > ");
@@ -49,7 +52,7 @@ public class ScoreTestVer2 {
         	}
           }
         
-        
+        //Step3 : 데이터 출력
         
         System.out.print("학생명\t국어\t영어\t수학\t총점\t평균\n");
         for(int i = 0; i < nameList.length; i++) {
@@ -66,9 +69,9 @@ public class ScoreTestVer2 {
         }
         System.out.println("-----------------------------------");
         
+        //Step4 : 데이터 조회
         boolean searchFlag = true;
         while(searchFlag) {
-	        //Step4 : 데이터 조회
 	        System.out.print("학생명 검색 > ");
 	        String searchName = scan.next();
 	        int searchIdx = -1;
