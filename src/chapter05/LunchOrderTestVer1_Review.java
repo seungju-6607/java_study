@@ -21,7 +21,9 @@ public class LunchOrderTestVer1_Review {
                 if (!scan.hasNextInt()) {
                 System.out.print("올바르지 않은 입력값입니다. 다시 입력해주세요. > ");
                 scan.next();
-               }else {break;}
+               }else {
+            	   break;
+            	}
             } 
 
             int menuNo = scan.nextInt();
