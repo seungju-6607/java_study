@@ -78,7 +78,7 @@ public class LunchOrderTestVer3 {
 
             System.out.println("=> 주문하신 메뉴는 " + menuName + ", " + quantity + "개, 가격은 " + totalCost + "원입니다.");
             System.out.print("계속 주문하시겠습니까? (계속: 아무 키, 종료: n) > ");
-            if (scan.next().equalsIgnoreCase("n")) {
+            if (scan.next().equals("n")) {
                 searchFlag = false;
             }
         }
