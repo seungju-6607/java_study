@@ -3,7 +3,6 @@ package chapter04;
 /*
  * 사칙 연산자 : +, -, *, /, %
  */
-
 public class OpArithmeticTest {
 
 	public static void main(String[] args) {
