@@ -3,6 +3,7 @@ package chpater07;
 public class Student {
 	String name;
 	int kor, eng, math;
+	int Tot; int Avg;
 	
 	
 	
