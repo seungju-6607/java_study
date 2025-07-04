@@ -6,7 +6,6 @@ public class ScoreMgmSystem {
 	String admin;
 	Student student;
 	Scanner scan = new Scanner(System.in);
-
 	
 	public ScoreMgmSystem() {
 		
