@@ -17,9 +17,6 @@ public class ScoreMgmSystem {
 	/*
 	 * 메뉴 선택 
 	 */
-	public void showTitle() {
-		
-	}
 	
 	public void showMenu() {
 	
@@ -181,7 +178,8 @@ public class ScoreMgmSystem {
     	            System.out.print("수학 > ");
     	            sList[modiIdx].math = scan.nextInt();
 
-    	            sList[modiIdx].Tot = sList[modiIdx].kor + sList[modiIdx].eng + sList[modiIdx].math;
+    	            sList[modiIdx].Tot = sList[modiIdx].kor + sList[modiIdx].eng
+    	            + sList[modiIdx].math;
     	            sList[modiIdx].Avg = sList[modiIdx].Tot / 3;
 
     	            System.out.println("=> 수정 완료!!");
