@@ -199,6 +199,7 @@ public class ScoreMgmSystem {
     	        else update();
         
     }
+  
     
     public void remove() {
     	System.out.println("[삭제] 학생명 검색 > ");
