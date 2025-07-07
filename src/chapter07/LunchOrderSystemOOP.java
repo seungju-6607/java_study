@@ -146,7 +146,7 @@ public class LunchOrderSystemOOP {
 		for(LunchOrderItem orderItem : orderItemList) {
 			if(orderItem != null) orderItem = null;
 		}
-		orderCount = 0;
+		orderCount = 0;  
 	}
 	
 	
