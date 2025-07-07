@@ -3,19 +3,16 @@ package chapter07;
 import java.util.Scanner;
 
 public class Testorder {
-    // Field
     Scanner scan = new Scanner(System.in);
     String[] drinkNames = {"☕ 아메리카노", "🍵 바닐라 라떼", "🥤 딸기 쉐이크"};
     int[] drinkPrices = {2800, 3500, 4000};
     TestDrinkOrder[] drinkMenuList = new TestDrinkOrder[3];  // 주문할 메뉴
     TestDrinkOrder[] orderItemList = new TestDrinkOrder[3];
     int orderCount = 0;
-    int amount = 0;  // 결제금액 - 사용자 입력
-    int change = 0;  // 잔돈
+    int amount = 0;  
+    int change = 0;  
 
-    // Constructor (없음)
-
-    // 메뉴 생성
+   
     public void createDrinkMenu() {
         for(int i = 0; i < drinkNames.length; i++) {
             TestDrinkOrder menu = new TestDrinkOrder();
@@ -26,7 +23,7 @@ public class Testorder {
         }
     }
 
-    // 메뉴 출력
+
     public void showDrinkMenu() {
         System.out.println("******************************************");
         for(TestDrinkOrder menu : drinkMenuList) {
@@ -38,7 +35,6 @@ public class Testorder {
         selectDrinkMenu();
     }
 
-    // 메뉴 선택
     public void selectDrinkMenu() {
         System.out.print("주문메뉴(숫자)> ");
 
@@ -51,7 +47,6 @@ public class Testorder {
         }
     }
 
-    // 메뉴 체크
     public void drinkMenuCheck(int drinkMenu) {
         if(drinkMenu >= 1 && drinkMenu <= 3) {
             order(drinkMenu);
@@ -61,7 +56,6 @@ public class Testorder {
         }
     }
 
-    // 주문 내역 출력
     public void orderList() {
         if(orderCount == 0) {
             System.out.println(" => 주문내역 존재X, 음료를 주문해주세요");
@@ -85,7 +79,6 @@ public class Testorder {
         }
     }
 
-    // 주문한 메뉴가 이미 있는지 체크
     public int searchOrderItemIdx(int drinkMenu) {
         int idx = -1;
         for(int i = 0; i < orderCount; i++) {
@@ -97,7 +90,6 @@ public class Testorder {
         return idx;
     }
 
-    // 주문
     public void order(int drinkMenu) {
         System.out.println(drinkMenu + " 주문!!");
         for(TestDrinkOrder menu : drinkMenuList) {
@@ -121,7 +113,6 @@ public class Testorder {
         showMainMenu();
     }
 
-    // 주문내역 초기화
     public void orderItemListInit() {
         for(int i = 0; i < orderCount; i++) {
             orderItemList[i] = null;
@@ -129,7 +120,6 @@ public class Testorder {
         orderCount = 0;
     }
 
-    // 총 결제 금액 계산
     public int totalPayment() {
         int sum = 0;
         for(TestDrinkOrder orderItem : orderItemList) {
@@ -140,7 +130,6 @@ public class Testorder {
         return sum;
     }
 
-    // 결제
     public void payment() {
         if(orderCount == 0) {
             System.out.println(" => 주문내역 존재X, 음료를 주문해주세요");
@@ -154,7 +143,7 @@ public class Testorder {
                 System.out.println("=> 총 입력 금액 : " + amount);
                 if(amount >= total) {
                     change = amount - total;
-                    System.out.println("=> 결제 성공!! 잔돈 : " + change);
+                    System.out.println("=> 결제 완료!! 잔돈 : " + change);
                     orderItemListInit();
                     amount = 0;
                     change = 0;
@@ -173,7 +162,6 @@ public class Testorder {
         }
     }
 
-    // 메인 메뉴 출력
     public void showMainMenu() {
         System.out.println("******************************************");
         System.out.println("\t Welcome to Drink Mart!!!");
@@ -186,7 +174,6 @@ public class Testorder {
         selectMainMenu();
     }
 
-    // 메인 메뉴 선택
     public void selectMainMenu() {
         System.out.print("메인메뉴(숫자)> ");
         if(scan.hasNextInt()) {
@@ -199,7 +186,6 @@ public class Testorder {
         }
     }
 
-    // 메인 메뉴 체크
     public void mainMenuCheck(int mainMenu) {
         switch(mainMenu) {
             case 1: showDrinkMenu(); break;
