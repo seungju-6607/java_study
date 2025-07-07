@@ -1,4 +1,4 @@
-package chpater07;
+package chapter07;
 
 public class Animal {
     //Field : 전역변수
