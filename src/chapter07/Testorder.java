@@ -141,7 +141,7 @@ public class Testorder {
             if(scan.hasNextInt()) {
                 amount += scan.nextInt();
                 System.out.println("=> 총 입력 금액 : " + amount);
-                if(amount >= total) { 
+                if(amount >= total) {  
                     change = amount - total;
                     System.out.println("=> 결제 완료 !! 잔돈 : " + change);
                     orderItemListInit();

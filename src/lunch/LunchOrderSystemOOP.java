@@ -1,11 +1,12 @@
-package chapter07;
+package lunch;
 
 import java.util.Scanner;
 
 public class LunchOrderSystemOOP {
 	//Field
-	Scanner scan = new Scanner(System.in);
-	String[] lunchMenuNames = {"햄버거(🍔)","피자요(🍕)","라멘요(🍜)","샐러드(🥗)"};
+	Scanner scan;
+	LunchOrderMenuManager menuManager;
+	String[] lunchMenuNames = {"햄버거(🍔)","피자요(🍕)","라멘요(🍜)","샐러드(🥗)"}; //선언+할당
 	int[] lunchMenuPrice = {100,200,300,400};
 	LunchMenu[] lunchMenuList = new LunchMenu[4];  	//주문할 메뉴 : LunchMenu
 	LunchOrderItem[] orderItemList = new LunchOrderItem[4];
@@ -13,8 +14,33 @@ public class LunchOrderSystemOOP {
 	int orderCount = 0;
 	int amount = 0; //결제금액-사용자 입력
     int change = 0; //잔돈	
+    String title;
 	
 	//Constructor
+    public LunchOrderSystemOOP() {
+    //	this.title = title;
+    	scan = new Scanner(System.in);
+    	menuManager = new LunchOrderMenuManager(this); 
+    	//다른곳에 시스템을 공유해줬을땐 여기다가 this를 넣는다
+    	
+    	lunchMenuList = new LunchMenu[4];
+    	orderItemList = new LunchOrderItem[4];
+    	
+    	menuManager.createLunchMenu();
+    //	showMainMenu();
+    }
+    
+    public LunchOrderSystemOOP(String title) {
+    	this.title = title;
+    	scan = new Scanner(System.in);
+    	menuManager = new LunchOrderMenuManager(this);
+    	lunchMenuList = new LunchMenu[4];
+    	orderItemList = new LunchOrderItem[4];
+    	
+    	menuManager.createLunchMenu();
+    	menuManager.showMainMenu();
+    }
+    
 	//Method
 	/*
 	 * 런치메뉴 생성
@@ -66,7 +92,7 @@ public class LunchOrderSystemOOP {
 	 */
 	public void showMainMenu() {
 		System.out.println("******************************************");
-		System.out.println("\t Welcome to Food Mart!!!");
+		System.out.println("\t Welcome to [" + title + "] Food Mart!!!");
 		System.out.println("******************************************");
 		System.out.println("\t 1. 음식 주문");		
 		System.out.println("\t 2. 주문 내역");		
@@ -75,7 +101,7 @@ public class LunchOrderSystemOOP {
 		System.out.println("\t 9. 프로그램 종료");		
 		System.out.println("******************************************");
 		System.out.println("***** Food Mart에 오신것을 환영합니다");	
-		createLunchMenu();
+		//createLunchMenu();
 		selectMainMenu();
 
 	}//showMainMenu method
@@ -150,9 +176,7 @@ public class LunchOrderSystemOOP {
 	}
 	
 	
-	/*
-	 * 주문 : order()
-	 */
+	
 	public void order(int lunchMenu) {
 		
 		System.out.println(lunchMenu + " 주문!!");
@@ -174,8 +198,8 @@ public class LunchOrderSystemOOP {
 				
 			}
 		}
-		System.out.println("=> 주문 완료!!");
-		showMainMenu();
+		System.out.println("=> 주문 완료!!" + orderCount);
+		menuManager.showMainMenu();
 	}
 	
 	
@@ -251,7 +275,7 @@ public class LunchOrderSystemOOP {
 				scan.next();
 			}
 		}	
-		showMainMenu();
+		menuManager.showMainMenu();
 	}
 	
 

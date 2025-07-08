@@ -1,4 +1,4 @@
-package chapter07;
+package lunch;
 
 public class LunchPaymentItem {
     //필드
