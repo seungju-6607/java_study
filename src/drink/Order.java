@@ -1,12 +1,12 @@
 package drink;
 
-import commons.Menu;
+//import commons.Menu;
 
 public class Order {
-    //Field
+	//Field
 	Menu orderMenu;
 	
-    //Constructor
+	//Constructor
 	public Order() {}
 	public Order(Menu orderMenu) {
 		this.orderMenu = orderMenu;
@@ -14,15 +14,14 @@ public class Order {
 	
 	//Method
 	public void getInfo() {
-        
-		System.out.printf("=> 주문 메뉴 : " + orderMenu.name + ", "
-				+ "결제 예정 금액 : %,d원\n",orderMenu.price);
+		String price = String.format("%,d", orderMenu.price);
+		System.out.println("=> 주문 메뉴 : "+ orderMenu.name 
+						+ ", 결제 예정 금액 : "+ price + "원");
 	}
 	
 	public String getName() {
 		return orderMenu.name;
 	}
-	
 	public int getTotal() {
 		return orderMenu.price;
 	}

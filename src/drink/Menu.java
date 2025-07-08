@@ -1,4 +1,4 @@
-package commons;
+package drink;
 
 public class Menu {
 	int no;

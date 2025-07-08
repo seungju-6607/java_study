@@ -1,14 +1,14 @@
 package drink;
 
 public class Payment {
-	//필드
+	//Field
 	int amount;
 	int change;
 	
-	//생성자
+	//Constructor
 	public Payment() {}
 	
-	//메소드
+	//Method
 	public void setAmount(int amount) {
 		this.amount += amount;
 	}
@@ -25,7 +25,7 @@ public class Payment {
 		if(amount >= total) {
 			change = amount - total;
 			result = true;
-		}
+		} 
 		
 		return result;
 	}
