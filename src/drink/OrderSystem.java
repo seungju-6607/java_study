@@ -1,7 +1,7 @@
 package drink;
 
 import java.util.Scanner;
-
+import commons.Menu;
 public class OrderSystem {
 	//필드
 	String title;
