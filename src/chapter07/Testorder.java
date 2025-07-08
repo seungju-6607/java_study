@@ -109,7 +109,8 @@ public class Testorder {
                 break;
             }
         }
-        System.out.println("=> 주문 완료!!");
+        
+        System.out.println("=> 주문 메뉴!!");
         showMainMenu();
     }
 
