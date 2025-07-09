@@ -9,10 +9,10 @@ public class RestArea {
 		this("만남의 광장");
 	}
 	public RestArea(String name) {
-		this.name = name;
+		this.name = name; // 확장을 위해 사용한다.
 		user = new User("정국");
 		welcome();		
-		machine = new VendingMachine();
+		machine = new VendingMachine(user);
 	}
 	
 	public void welcome() {
