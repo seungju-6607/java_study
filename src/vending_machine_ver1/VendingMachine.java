@@ -16,7 +16,7 @@ public class VendingMachine {
 	int change;
 	
 	public final static int EXIT = 9;  //클래스명.상수명
-	
+	  
 	public VendingMachine(User user) {
 		this("막심", user);
 	}
@@ -29,7 +29,7 @@ public class VendingMachine {
 	}
 	
 	/*
-	 * 메뉴 체크
+	 * 메뉴 체크       
 	 */
 	public boolean menuCheck(int menuNo) {
 		boolean result = false;		
