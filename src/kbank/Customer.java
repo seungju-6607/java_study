@@ -75,5 +75,13 @@ public class Customer {
 		this.accountPaper = accountPaper;
 	}
 
+	public Scanner getScan() {
+		return scan;
+	}
+
+	public void setScan(Scanner scan) {
+		this.scan = scan;
+	}
+
     
 }
