@@ -29,7 +29,7 @@ public class VendingMachine {
 	}
 	
 	/*
-	 * 메뉴 체크       
+	 * 메뉴 체크        
 	 */
 	public boolean menuCheck(int menuNo) {
 		boolean result = false;		
