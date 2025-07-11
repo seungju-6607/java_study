@@ -40,7 +40,6 @@ public class AccountVo {
 	}
 	public void setBalance(int balance) {
 		this.balance = balance;
-	}
-  
-  
+	}	
+	
 }
