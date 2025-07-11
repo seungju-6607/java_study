@@ -5,7 +5,7 @@ public class KBBank {
 	public static void main(String[] args) {
 		//입출금 용지 한장 비치됨
 		AccountPaperVo accountPaper = AccountPaperVo.getInstance();
-System.out.println("1 ----> "+ accountPaper.getName());		
+		System.out.println("1 ----> "+ accountPaper.getName());		
 		BankMan staffPark = new BankMan("박보검");
 		staffPark.showAccountList();
 		
@@ -13,7 +13,7 @@ System.out.println("1 ----> "+ accountPaper.getName());
 		
 //		고객 홍길동이 출금용지에 이름, 계좌번호, 비밀번호를 작성함
 		hong.setAccountPaper(accountPaper);
-System.out.println("2 ----> "+ accountPaper.getName());		
+		System.out.println("2 ----> "+ accountPaper.getName());		
 
 //		은행 직원 박보검이 용지를 확인함
 //		staffPark.setAccountPaper(hong.getAccountPaper());

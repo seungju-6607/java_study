@@ -1,5 +1,7 @@
 package kbank;
 
+import kbank2.BankSystem;
+
 /**
  * 은행 직원 클래스
  */
@@ -17,11 +19,13 @@ public class BankMan {
 		accountList = createAccountList();
 	}
 	
+	
 	/**
 	 * 입출금 용지 체크 
 	 */
 	public void checkPaper(AccountPaperVo accountPaper, Customer customer) {
 		this.customer = customer;
+		this.accountPaper = accountPaper;
 		
 		System.out.println("[은행직원:"+ name + "] 출금 용지 정보를 확인하는 중입니다..");
 		if(accountPaper.getName() == null) {
@@ -60,7 +64,7 @@ public class BankMan {
 		}
 		System.out.println("==========================================");
 	}	
-	
+	 
 	/**
 	 * 은행직원이 관리하는 고객 리스트 생성
 	 */
