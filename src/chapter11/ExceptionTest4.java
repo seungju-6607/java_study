@@ -30,6 +30,9 @@ public class ExceptionTest4 {
 		} catch (Exception e) {
 			System.out.println("Exception : age는 0보다 커야 함!!");
 			e.printStackTrace();
+		} finally {
+			scan.close();
+			System.out.println("-- 프로그램 종료 --");
 		}
 
 	}//main
