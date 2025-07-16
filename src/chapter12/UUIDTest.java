@@ -1,10 +1,13 @@
 package chapter12;
 
+import java.util.UUID;
+
 public class UUIDTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		UUID uuid = new UUID(120,10); 
 
+		System.out.println(uuid);
 	}
 
 }
