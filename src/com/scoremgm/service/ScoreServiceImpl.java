@@ -18,7 +18,7 @@ public class ScoreServiceImpl implements ScoreService{
 	public ScoreServiceImpl() {}
 	public ScoreServiceImpl(ScoreMgmSystem sms) {
 		this.sms = sms;
-		this.scan = scan;
+		this.scan = sms.scan;
 	}
 	
 	/**
@@ -70,7 +70,7 @@ public class ScoreServiceImpl implements ScoreService{
 		//저장소 등록을 위한 Repository 호출
 		if(repository.insert(member)) {
 			//성공
-			System.out.println("=> 등록 완료!! 전체학생 : " + getCount());
+			System.out.println("=> 등록 완료!!");
 		} else {
 			System.out.println("=> 등록 실패!!");
 		}
@@ -80,9 +80,29 @@ public class ScoreServiceImpl implements ScoreService{
 		sms.selectMenu();
 	}		
 		
-	
+	/**
+	 * 조회
+	 */
+	@Override
 	public void list() {
-		
+		if(getCount() != 0) {
+		List<Member> list = repository.findAll();
+		list.forEach((member) -> {
+			System.out.println("--------------------------------------------------------------");
+			System.out.println("학번\t\t이름\t전공\t국어\t영어\t수학");
+			System.out.print(member.getNo() + "\t");
+			System.out.print(member.getName() + "\t");
+			System.out.print(member.getDepartment() + "\t");
+			System.out.print(member.getKor() + "\t");
+			System.out.print(member.getEng() + "\t");
+			System.out.print(member.getMath() + "\n");
+			
+			});
+		} else {
+			System.out.println("=> 등록된 학생이 없습니다.");
+			sms.showMenu();
+			sms.selectMenu();
+		}
 	}
 	public void search() {
 		
@@ -94,6 +114,8 @@ public class ScoreServiceImpl implements ScoreService{
 		
 	}
 	public void exit() {
+		System.out.println("=> 프로그램 종료!!");
+		System.exit(0);
 		
 	}
 	

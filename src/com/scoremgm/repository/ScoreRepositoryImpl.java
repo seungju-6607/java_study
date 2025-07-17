@@ -21,5 +21,9 @@ public class ScoreRepositoryImpl implements ScoreRepository{
 		
 		
 	}
+	@Override
+	public List<Member> findAll() {
+		return storage;
+	}
 	
 }
