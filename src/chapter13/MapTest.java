@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MapTest {
 
-	public static void main(String[] args) {
+ 	public static void main(String[] args) {
 		Map<Integer, String> subjects = new HashMap<Integer, String> ();
 		
 		//1. 데이터 저장 : C(Crate)
@@ -19,7 +19,7 @@ public class MapTest {
 		subjects.forEach((key,value) -> System.out.println(key +"." + value)); 
 		
 		//3. 데이터 수정 : U(Update)
-		if(subjects.containsKey(2)) subjects.put(2,  "oracle");
+		if(subjects.containsKey(2)) subjects.put(2,"oracle");
 		
 		System.out.println();
 		subjects.forEach((key,value) -> System.out.println(key + "," + value)) ;
