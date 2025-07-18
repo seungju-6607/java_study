@@ -5,7 +5,7 @@ public interface BookService {
 	 void list();
 	 void search();
 	 void update();
-	 void delete();
+	 void remove();
 	 void exit();
 	 int getCount();
 

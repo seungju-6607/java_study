@@ -22,7 +22,7 @@ public class ScoreServiceImpl implements ScoreService{
 	}
 	
 	/**
-	 * 학번 정보 임시 저장 객체 생성
+	 * 학번 정보 임시 저장 객체 
 	 * @return List
 	 */
 	public List createMemberInfo() {
