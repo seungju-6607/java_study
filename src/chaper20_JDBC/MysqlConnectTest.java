@@ -23,11 +23,6 @@ public class MysqlConnectTest {
 		System.out.println("---->> 2단계 성공!!");
 		
 		//3단계 ㅣ stmt 객체를 ResultSet 객체 생성
-//		String sql = "select emp_id, emp_name, dept_id, salary from employee" + "where dept_id = 'SYS'";
-//		StringBuilder sb = new StringBuilder(100);
-//		sb.append("select emp_id, emp_name, dept_id, salary from employee");
-//		sb.append("where dept_id = 'SYS'");
-		//JDK 15이상 사용가능 --> 자바스크립트 ``(백틱연산자~) : 템플릿 리터럴
 		
 		String sql = """
 				select 
@@ -45,6 +40,7 @@ public class MysqlConnectTest {
 			//4단계 : rs객체에서 데이터 추출
 			System.out.println("---->> 4단계 성공 : 데이터 추출!!");
 			while(rs.next()) {
+				//List<row가 담기는 객체:EmployeeVo>
 				System.out.print(rs.getInt(1) + "\t");
 				System.out.print(rs.getString(2) + "\t");
 				System.out.print(rs.getString(3) + "\t");
