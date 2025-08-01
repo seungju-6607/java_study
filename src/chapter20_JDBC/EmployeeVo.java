@@ -1,9 +1,10 @@
-package chaper20_JDBC;
+package chapter20_JDBC;
 
 public class EmployeeVo {
-	String empId,empName,engName,gender,hireDate,retireDate, deptId, phone,email;
-	int rno ,salary;
+	String empId, empName, engName, gender, hireDate, retireDate, deptId, phone, email;
+	int rno, salary;
 	double bonus;
+	
 	public String getEmpId() {
 		return empId;
 	}
@@ -76,5 +77,5 @@ public class EmployeeVo {
 	public void setBonus(double bonus) {
 		this.bonus = bonus;
 	}
+	
 }
-
