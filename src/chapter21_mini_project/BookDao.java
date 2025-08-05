@@ -141,7 +141,7 @@ public class BookDao extends DBConn {
             """;
             getPreparedStatement(sql);
 
-            rs = pstmt.executeQuery();  // SELECT는 executeQuery()
+            rs = pstmt.executeQuery();  
 
             System.out.println("장바구니 목록:");
             while (rs.next()) {
